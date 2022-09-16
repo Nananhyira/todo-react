@@ -14,7 +14,7 @@ import {
 const style = {
 	bg: `h-screen w-screen p-4 bg-gradient-to-r from-[#051118] to-[#0b0a21]`,
 	container: `bg-slate-100 max-w-[500px] w-full m-auto rounded-md shadow-xl p-4`,
-	heading: `text-3xl font-bold text-center text-gray-800 p-2`,
+	heading: `text-3xl font-bold text-center text-purple-700 p-2`,
 	form: `flex justify-between`,
 	input: `border p-2 w-full text-xl`,
 	button: `border p-4 ml-2 bg-red-500 text-slate-100`,
@@ -66,7 +66,7 @@ function App() {
 	return (
 		<div className={style.bg}>
 			<div className={style.container}>
-				<h3 className={style.heading}>Todo App</h3>
+				<h3 className={style.heading}>kachi's Todo App</h3>
 				<form onSubmit={handleSubmit} className={style.form}>
 					<input
 						onChange={(e) => {

@@ -14,3 +14,23 @@ code {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+h3 {
+	font-family: "Anton", sans-serif;
+	font-family: "Festive", cursive;
+	font-family: "Fruktur", cursive;
+	font-family: "Noto Sans JP", sans-serif;
+	font-family: "Oswald", sans-serif;
+	font-family: "Poppins", sans-serif;
+	font-family: "Source Sans 3", sans-serif;
+	font-family: "Tapestry", cursive;
+}
+p {
+	font-family: "Anton", sans-serif;
+	font-family: "Festive", cursive;
+	font-family: "Fruktur", cursive;
+	font-family: "Noto Sans JP", sans-serif;
+	font-family: "Oswald", sans-serif;
+	font-family: "Poppins", sans-serif;
+	font-family: "Source Sans 3", sans-serif;
+	font-family: "Tapestry", cursive;
+}
