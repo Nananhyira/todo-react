@@ -11,12 +11,11 @@ import {
 	addDoc,
 	deleteDoc,
 	orderBy,
-	Timestamp,
 	serverTimestamp,
 } from "firebase/firestore";
 
 const style = {
-	bg: `h-screen w-screen p-4 bg-gradient-to-r from-[#051118] to-[#0b0a21]`,
+	bg: `h-full w-screen p-4 bg-gradient-to-r from-[#051118] to-[#0b0a21]`,
 	container: `bg-slate-100 max-w-[500px] w-full m-auto rounded-md shadow-xl p-4`,
 	heading: `text-3xl font-bold text-center text-purple-700 p-2`,
 	form: `flex justify-between`,
@@ -25,6 +24,7 @@ const style = {
 	count: `text-center p-2`,
 };
 
+console.log(process.env);
 function App() {
 	const [todos, setTodos] = useState([]);
 	const [input, setInput] = useState("");
