@@ -11,7 +11,10 @@ import {
 	addDoc,
 	deleteDoc,
 	orderBy,
+	Timestamp,
+	serverTimestamp,
 } from "firebase/firestore";
+
 const style = {
 	bg: `h-screen w-screen p-4 bg-gradient-to-r from-[#051118] to-[#0b0a21]`,
 	container: `bg-slate-100 max-w-[500px] w-full m-auto rounded-md shadow-xl p-4`,
@@ -36,16 +39,20 @@ function App() {
 		await addDoc(collection(db, "todo"), {
 			text: input,
 			completed: false,
+			timestamp: serverTimestamp(),
 		});
 		setInput("");
 	};
 	//read todo from firebase
 	useEffect(() => {
-		const q = query(collection(db, "todo"), orderBy("text", "desc"));
+		const q = query(collection(db, "todo"), orderBy("timestamp", "desc"));
 		const unsubscribe = onSnapshot(q, (querySnapshot) => {
 			let todosnew = [];
 			querySnapshot.forEach((doc) => {
-				todosnew.push({ ...doc.data(), id: doc.id });
+				todosnew.push({
+					...doc.data(),
+					id: doc.id,
+				});
 			});
 			setTodos(todosnew);
 		});
